@@ -6,7 +6,7 @@ import os
 
 def DrawScore(text, score, color, space):
     text = f'{text}: ' + str(score)
-    textSurface = pygame.font.Font('freesansbold.ttf', 32).render(text, True, WHITE, color)
+    textSurface = pygame.font.Font('OpenSans-Bold.ttf', 32).render(text, True, WHITE, color)
     textRect = textSurface.get_rect()
     textRect.centerx = windowSurface.get_rect().centerx
     textRect.centery = windowSurface.get_rect().centery + space
@@ -72,10 +72,7 @@ while True:
 
     # Check for the QUIT event
     for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            exit()
-        elif event.type == KEYDOWN:
+        if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
                 pygame.quit()
                 exit()
